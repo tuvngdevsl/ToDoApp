@@ -1,0 +1,14 @@
+#Get All Task
+curl http://localhost:3001/todos
+
+#Get Task by Id
+curl http://localhost:3001/todos/1
+
+#Create Task    
+curl -X POST -H "Content-Type: application/json" -d '{"destination": "New Todo", "completed": false}' http://localhost:3001/todos
+
+#Update Task
+curl -X PUT -H "Content-Type: application/json" -d '{"destination": "Updated Todo", "completed": true}' http://localhost:3001/todos/1
+
+#Delete Task
+curl -X DELETE http://localhost:3001/todos/2
